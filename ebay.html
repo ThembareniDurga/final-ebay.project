@@ -1,0 +1,341 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics,Cars,Fashion, Collecibes &More</title>
+    <link rel="icon" href="data:image/jpeg;base64,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">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<style>
+  .container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    
+  }
+  .container
+    img{
+      border-radius: 50%;
+    }
+  footer {
+  padding: 3px;
+  background-color: white;
+
+}
+.id{
+            background-color:  rgba(217, 243, 74, 0.933);
+            height: 300px;width: 1300px;
+        }
+        
+      button{
+            cursor: pointer;
+			margin: 15px 0;
+        }
+        div.scrollmenu {
+  background-color: white;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu img {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu img:hover {
+  background-color: white;
+}
+div.roundA{
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto auto;
+            
+        }
+div.roundB{
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
+            
+        }
+</style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"style="margin-right: 120px;font-size: small"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#" style="color: black;margin-left: 10px;">Hi!</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./signin.php" style="color: rgb(10, 170, 238);font-size: small;margin-top: -0px;"><u>sign in</u><p style="color: black;margin-top: -20px;margin-left: 45px;">or</p><p style="margin-top: -35px;margin-left: 65px;font-size: small;"><u>Register</u></p></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.ebay.com/globaldeals" style="color: black;">Daily Deals</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.ebay.com/help/home" style="margin-right: 600px; color: black;">Help &contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.ebay.com/sl/sell" style="color: black;">Sell</a>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
+                Watchlist
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
+                  My eBay
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Summary</a>
+                  <a class="dropdown-item" href="#">Recently viewed</a>
+                  <a class="dropdown-item" href="#">Bids/Offers</a>
+                  <a class="dropdown-item" href="#">Watchlist</a>
+                  <a class="dropdown-item" href="#">Purchase History</a>
+                  <a class="dropdown-item" href="#">Buy Again</a>
+                  <a class="dropdown-item" href="#">Selling</a>
+                  <a class="dropdown-item" href="#">Saved Searches</a>
+                  <a class="dropdown-item" href="#">Saved Sellers</a>
+                  <a class="dropdown-item" href="#">Messages</a>
+                </div>
+              </li>
+              <i class="bi bi-bell" style="margin-bottom: 30px;margin-left: 10px;"></i>
+              <i class="bi bi-cart3" style="margin-left: 20px;"></i>
+          </ul>
+        </div>
+      </nav>
+    
+      <img src="data:image/png;base64,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" style="height: 150px;width: 150px;margin-left: 120px;margin-top: -30px;">
+      <h6 style="margin-top: -120px; margin-left: 250px;">shop by<br>category</h6>
+      <div style="margin-top: -50px;">
+      <i class="bi bi-chevron-compact-down" style="margin-top: -150px; margin-left: 320px;"></i>
+      <input type="text" style="width: 800px;height: 40px;margin-top: -120px;" placeholder="Search for anything" >
+      <a href="https://www.ebay.com/n/all-categories"><button type="button" class="btn btn-primary"style="width: 180px;height: 45px; color:white;">Search</button></a>
+      <h6 style="margin-left: 1350px;margin-top: -40px;color: gray;">Advanced</h6>
+      
+    </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-right: 250px;margin-left: 80px;">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="https://www.ebay.com/" style="margin-left: 25px;">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <i class="bi bi-heart-fill" style="height: 27px;width: 20px; margin-bottom: 100px;"></i>
+                <a class="nav-link" href="./signin.php" style="color: black; margin-top: -25px;margin-left: 10px;">saved</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.ebay.com/b/Electronics/bn_7000259124" style="color: black;">Electronics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="https://www.ebay.com/b/Auto-Parts-Accessories/6028/bn_569479" style="color: black;">Motors</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link disabled" href="https://www.ebay.com/b/Fashion/bn_7000259856" style="color: black;">Fashion</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="https://www.ebay.com/b/Collectibles-Art/bn_7000259855" style="color: black;">Collectibles and Art</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="https://www.ebay.com/b/Sporting-Goods/888/bn_1865031" style="color: black;">Sports</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="https://www.ebay.com/b/Health-Beauty/26395/bn_1865479" style="color: black;">Health & Beauty</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="https://www.ebay.com/b/Business-Industrial/12576/bn_1853744" style="color: black;">Industrial equipment</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="https://www.ebay.com/b/Home-Garden/11700/bn_1853126" style="color: black;">Home & Garden</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="https://www.ebay.com/globaldeals" style="color: black;">Deals</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="https://export.ebay.com/en/" style="color: black;">Sell</a>
+                </li>
+            </ul>
+          </div>
+        </nav>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div style="margin-left: 150px;">
+              <p style="background-color: rgb(254, 248, 248);color: black;font-size: 40px;"><b>Show your style <br>in collectible<br>kicks</b><p style="margin-top: -10px;">Find rare and classic sneakers at <br>fabulous prices!</p></p>
+              <button type="button" class="btn btn-outline-dark" style="height: 50px;width: 150px;">shop now<i class="bi bi-arrow-right" style="margin-left: 10px;"></i></button>
+              </div>
+              <div style="margin-top: -250px;margin-left: 500px;">
+           <a href="https://www.ebay.com/b/Collectible-Sneakers-LATM/bn_7116358158?_trkparms=%26clkid%3D1949390913985610144"> <img class="d-block w-100" src="https://i.ebayimg.com/images/g/010AAOSwjtlkuTNs/s-l960.webp" alt="First slide" style="height: 300px;width: 900px;"></a>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <div style="margin-left: 150px;">
+              <p style="background-color: white;color: black;font-size: 40px;"><b>Irresistible luxury <br>from head to toe</b><p style="margin-top: -15px;">Rare snickers,jewellery and bags<br>by the leading designers.</p></p>
+              <button type="button" class="btn btn-outline-dark" style="height: 50px;width: 150px;">shop now<i class="bi bi-arrow-right" style="margin-left: 10px;"></i></button>
+              </div>
+              <div style="margin-top: -250px;margin-left: 500px;">
+           <a href="https://www.ebay.com/b/Luxury-on-eBay/bn_7109710914?_trkparms=%26clkid%3D1949390913985610146"> <img class="d-block w-100" src="https://i.ebayimg.com/images/g/NcUAAOSwyGFknaOQ/s-l960.webp" alt="First slide" style="height: 300px;width: 900px;"></a>
+          </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <a href="https://www.ebay.com/globaldeals?_trkparms=pageci%3A4e1319bc-3052-11ee-a42e-125021deca64%7Cparentrq%3Ab08b1f6e1890a8ccb3b51603fffed737%7Ciid%3A1" style="color: black; font-size: large;"><h3 style="margin-left: 160px;margin-top: 50px;">Daily deals</h3></a>
+      <a href="https://www.ebay.com/globaldeals?_trkparms=pageci%3A4e1319bc-3052-11ee-a42e-125021deca64%7Cparentrq%3Ab08b1f6e1890a8ccb3b51603fffed737%7Ciid%3A1"><h4 style="margin-left: 350px; margin-top: -40px;color: black;">see all<i class="bi bi-arrow-right"></i></h4></a>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="margin-top: 40px;">
+      <div class="scrollmenu" style="margin-left: 120px; margin-right: 80px;">
+    <cursol>
+      <div  class="roundB">
+  <img src="https://i.ebayimg.com/images/g/UOkAAOSwC1RkoxC8/s-l225.webp"> 
+  <img src="https://i.ebayimg.com/images/g/AcYAAOSwkttkfzHI/s-l225.webp">
+  <img src="https://i.ebayimg.com/images/g/dGkAAOSwC~NkrgyO/s-l225.webp">
+  <img src="https://i.ebayimg.com/images/g/9vgAAOSwpyZkubwe/s-l225.webp">
+  <img src="https://i.ebayimg.com/images/g/4zsAAOSwUchhl58l/s-l225.webp">
+  <img src="https://i.ebayimg.com/images/g/R8QAAOSwxHlkAkDF/s-l225.webp">
+  <img src="https://i.ebayimg.com/images/g/ovoAAOSwNk5h1vhl/s-l225.webp">
+  <img src="https://i.ebayimg.com/images/g/4sAAAOSwAoth1wov/s-l225.webp">
+  <img src="https://i.ebayimg.com/images/g/V-sAAOSwEFxh1xDp/s-l225.webp">
+  <img src="https://i.ebayimg.com/images/g/XCMAAOSw2QVfMxTg/s-l225.webp">
+  <img src="https://i.ebayimg.com/images/g/IEsAAOSwy~RgdeDj/s-l225.webp">
+  <p><a href="https://www.ebay.com/itm/314733625786?_trkparms=pageci%3A3a240c3d-304d-11ee-8eb8-da19176fc09b%7Cparentrq%3Ab069d8581890ac6944f218caffffded6%7Ciid%3A1" style="color: black;">$1,995.00</a></p>
+    <p><a href="https://www.ebay.com/itm/185929785828?_trkparms=pageci%3A3a240c3d-304d-11ee-8eb8-da19176fc09b%7Cparentrq%3Ab069d8581890ac6944f218caffffded6%7Ciid%3A1" style="color: black;">$627.24</a></p>
+    <p><a href="https://www.ebay.com/b/Computers-Tablets-Network-Hardware/58058/bn_1865247" style="color: black;">$99.99</p><br><p style="text-decoration:line-through;margin-left:-250px">$125 .<p style="margin-left:-180px;margin-top:-40px">25% off</p></p></a></p>
+    <p><a href="https://www.ebay.com/itm/314733625786?_trkparms=pageci%3A3a240c3d-304d-11ee-8eb8-da19176fc09b%7Cparentrq%3Ab069d8581890ac6944f218caffffded6%7Ciid%3A1" style="color: black;margin-left:-500px">$1,995.00</a></p>
+    <p><a href="https://www.ebay.com/itm/155678052620?_trkparms=pageci%3Aca196c41-304e-11ee-b57b-d2c65643ccaf%7Cparentrq%3Ab07415551890ad58ad915933fffcac90%7Ciid%3A1" style="color: black;margin-left:-500px">$49.99</a></p>
+    <p><a href="https://www.ebay.com/itm/275033634751?_trkparms=pageci%3Aca196c41-304e-11ee-b57b-d2c65643ccaf%7Cparentrq%3Ab07415551890ad58ad915933fffcac90%7Ciid%3A1" style="color: black;margin-left:-500px">$67.48</a></p>
+    <p><a href="https://www.ebay.com/itm/275724299702?_trkparms=pageci%3Aca196c41-304e-11ee-b57b-d2c65643ccaf%7Cparentrq%3Ab07415551890ad58ad915933fffcac90%7Ciid%3A1" style="color: black;margin-left:-500px">$348.20</a></p>
+    <p><a href="https://www.ebay.com/itm/275092885285?_trkparms=pageci%3Aca196c41-304e-11ee-b57b-d2c65643ccaf%7Cparentrq%3Ab07415551890ad58ad915933fffcac90%7Ciid%3A1" style="color: black;margin-left:-500px">$378.50</a></p>
+    <p><a href="https://www.ebay.com/itm/275092942870?_trkparms=pageci%3Aca196c41-304e-11ee-b57b-d2c65643ccaf%7Cparentrq%3Ab07415551890ad58ad915933fffcac90%7Ciid%3A1" style="color: black;margin-left:-500px">$100.00</a></p>
+    <p><a href="https://www.ebay.com/itm/183346135666?_trkparms=pageci%3Aca196c41-304e-11ee-b57b-d2c65643ccaf%7Cparentrq%3Ab07415551890ad58ad915933fffcac90%7Ciid%3A1" style="color: black;margin-left: 0px;">$245.25</a></p>
+    <p><a href="https://www.ebay.com/itm/173459390264?_trkparms=pageci%3Aca196c41-304e-11ee-b57b-d2c65643ccaf%7Cparentrq%3Ab07415551890ad58ad915933fffcac90%7Ciid%3A1" style="color: black;margin-left:0px">$375.20</a></p>
+
+    
+</cursol>
+</div>
+</div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <p style="background-color: rgb(59, 9, 9); color: white; height: 100px;width: 1200px;margin-left: 150px; margin-top: 30px;font-size: 20px; padding-top: 10px;"><b style="margin-left: 20px;">Have you been selling on eBay already?</b><br>To pay your fees or ask questions<button type="button" class="btn btn-light" style="margin-left: 1050px;margin-top: -50px;">Read more<i class="bi bi-arrow-right"></i></button></p>
+      <a href="https://www.ebay.com/globaldeals?_trkparms=pageci%3A4e1319bc-3052-11ee-a42e-125021deca64%7Cparentrq%3Ab08b1f6e1890a8ccb3b51603fffed737%7Ciid%3A1" style="color: black; font-size: large;"><h3 style="margin-left: 160px;margin-top: 50px;">Popular Destinations</h3></a>
+      <a href="https://www.ebay.com/globaldeals?_trkparms=pageci%3A4e1319bc-3052-11ee-a42e-125021deca64%7Cparentrq%3Ab08b1f6e1890a8ccb3b51603fffed737%7Ciid%3A1"><h4 style="margin-left: 450px; margin-top: -40px;color: black;">see all<i class="bi bi-arrow-right"></i></h4></a>
+      
+      <div class="roundA" style="margin-left:180px;margin-right:120px;padding:10px">
+    <img src="https://i.ebayimg.com/images/g/kEwAAOSwnZJcG8vM/s-l200.webp" style="height: 150px;width: 150px;">
+    <img src="https://i.ebayimg.com/images/g/FVIAAOSwFURcG8vK/s-l200.webp" style="height: 150px;width: 150px;">
+    <img src="https://i.ebayimg.com/images/g/gE4AAOSwgnJcG8vI/s-l200.webp" style="height: 150px;width: 150px;">
+    <img src="https://i.ebayimg.com/images/g/MyIAAOSwsrlcG8vM/s-l200.webp" style="height: 150px;width: 150px;">
+    <img src="https://i.ebayimg.com/images/g/WREAAOSwh7tcG8vJ/s-l200.webp" style="height: 150px;width: 150px;">
+    <img src="https://i.ebayimg.com/images/g/idwAAOSwgcdcG8vJ/s-l200.webp" style="height: 150px;width: 150px;">
+    <img src="https://i.ebayimg.com/images/g/hIgAAOSwyTtcJkbp/s-l200.webp" style="height: 150px;width: 150px;">
+    <p style="margin-left: 20px;"><a href="https://www.ebay.com/b/Jewelry/bn_7000259126" style="color: black;">Jewelry & Watches</a></p>
+    <p style="margin-left: 60px;"><a href="https://www.ebay.com/b/Beauty/bn_7000259123" style="color: black;">Beauty</a></p>
+    <p style="margin-left: 10px;"><a href="https://www.ebay.com/b/Computers-Tablets-Network-Hardware/58058/bn_1865247" style="color: black;">Computers & Tablets</a></p>
+    <p style="margin-left: 60px;"><a href="https://www.ebay.com/b/Toys-Hobbies/220/bn_1865497" style="color: black;">Toys</a></p>
+    <p><a href="https://www.ebay.com/b/Cell-Phones-Smart-Watches-Accessories/15032/bn_1865441" style="color: black;">Cellphones &<br>Accessories</a></p>
+    <p style="margin-left: 60px;"><a href="https://www.ebay.com/b/Home-Garden/11700/bn_1853126" style="color: black;">Home</a></p>
+    <p style="margin-left: 60px;"><a href="https://www.ebay.com/b/Shoes/bn_7000259122" style="color: black;">Shoes</a></p>
+      </div>
+
+    
+      <hr style="width:100%;text-align:left;margin-left:0">
+      <b><footer style="margin-left: 150px;"></b><br><br>
+        <p><span style="color: gray;"><b>Buy</b></span><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">Registration</a><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">eBay Money Back Gurantee</a><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">Bidding & buying help</a><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">stores</a><br>
+       </p>
+      </footer>
+      <footer style="margin-left: 400px; margin-top: -140px;">
+        <p><span style="color: gray;"><b>Sell</b></span><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">Start selling</a><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">Learn to sell</a><br>
+        <a href="mailto:hege@example.com" style="color: gray;font-size: small;">Affiliates</a><br><br><br>
+        <a href="mailto:hege@example.com" style="color: gray;"><b>Tools & apps</b></a><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">Developers</a><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">Security center</a><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">Site map</a><br>
+       </p>
+      </footer>
+      <footer style="margin-left: 700px; margin-top: -270px;">
+        <p><span style="color: gray;"><b>Stay connected</b></span><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">eBay's Blogs</a><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;"><i class="bi bi-facebook"></i>Facebook</a><br>
+        <a href="mailto:hege@example.com" style="color: gray;font-size: small;"><i class="bi bi-twitter"></i>Twitter</a>
+       </p>
+      </footer>
+      <footer style="margin-left: 1000px; margin-top: -120px;">
+        <p><span style="color: gray;"><b>About eBay</b></span><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">Company infor</a><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">News</a><br>
+        <a href="mailto:hege@example.com" style="color: gray;font-size: small;">Investors</a><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">Careers</a><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">Governemnt relations</a><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">Advertise with us</a><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">Policies</a><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">Verified Rights Owner(VeRO)program</a><br>
+       </p>
+      </footer>
+      <footer style="margin-left: 1300px; margin-top: -235px;">
+        <p><span style="color: gray;"><b>Help & Contact</b></span><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">Seller information center</a><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">Conatct us</a><br><br><br>
+        <a href="mailto:hege@example.com" style="color: gray;"><b>Community</b></a><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">Announcement</a><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">Discussion boards</a><br>
+        <a href="mailto:hege@example.com" style="color: gray; font-size: small;">eBay Giving Works</a><br><br>
+        <a href="mailto:hege@example.com" style="color: gray;"><b>eBay sites</b></a><br>
+        <div class="dropdown">
+          <button class="btn btn-Light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="mailto:hege@example.com" style="color: gray; font-size: small;"><img src="./unitedstate.jpg" style="height: 20px;width: 35px;"> United states</a>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          </div>
+        </div>
+       </p>
+      </footer>
+
+<body>
+</html>
